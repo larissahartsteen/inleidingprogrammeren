@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Zet je aardappel in elkaar!</title>
+</head>
+<body> 
+
+    <h1 class="aardappelnaam"></h1>
+
+        <!-- buttons -->
+        <button id="vorige">Vorige naam</button>
+        <button id="volgende">Volgende naam</button>
+
+            <!-- audio --><!-- bron audio play: https://stackoverflow.com/questions/18826147/javascript-audio-play-on-click -->
+            <input type="button" id="klaar" value="Klaar" onclick="playKlaarButtonAudio()">
+                <audio id="audioklaar" src="audio/ha-ha-we-did-it.mp3"></audio><!-- bron audio: https://www.soundboard.com/sb/sound/22700 -->
+
+            <input type="button" id="opnieuw" value="Opnieuw" onclick="playOpnieuwAudio()">
+                <audio id="audiopop" src="audio/pop.mp3"></audio><!-- bron audio: https://bigsoundbank.com/detail-1860-cap-cider-3.html -->
+
+            <input type="button" id="playsoundtrack" value="Play soundtrack" onclick="playSoundtrackAudio()">
+            <input type="button" id="pausesoundtrack" value="Pause soundtrack" onclick="pauseSoundtrackAudio()">
+                <audio id="audiosoundtrack" src="audio/youve-got-a-friend-in-me.mp3"></audio><!-- bron audio: https://mp3snow.com/XHFy3YWpRx8 -->
+            <!-- einde audio -->
+        <!-- einde buttons -->  
+
+
+        <!-- images aardappel samenstellen --><!-- bron style display: https://www.w3schools.com/jsref/prop_style_display.asp -->
+        <div id="mrpotatohead">
+            <img id="aardappel" src="images/aardappel.png">
+            <img id="mislukt" style="display: none;" src="images/mislukt.png">
+            <img id="hoed" style="display: none;" src="images/hoedje.png">
+            <img id="ogen" style="display: none;" src="images/ogen.png">
+            <img id="neus" style="display: none;" src="images/neus.png">
+            <img id="mond" style="display: none;" src="images/mond.png">
+            <img id="oren" style="display: none;" src="images/oren.png">
+            <img id="armen" style="display: none;" src="images/armen.png">
+            <img id="schoenen" style="display: none;" src="images/schoenen.png">
+        </div>
+        <!-- images aardappel samenstellen -->
+
+
+        <!-- rij met aardappel onderdelen -->
+        <div id="rijopties">
+            <img id="hoedinrij" src="images/hoedje.png">
+            <img id="ogeninrij" src="images/ogen.png">
+            <img id="neusinrij" src="images/neus.png">
+            <img id="mondinrij" src="images/mond.png">
+            <img id="oreninrij" src="images/oren.png">
+            <img id="armeninrij" src="images/armen.png">
+            <img id="schoeneninrij" src="images/schoenen.png">
+        </div>
+        <!-- einde rij met aardappel onderdelen -->
+
+        
+        <!-- teller voor aantal pogingen over -->
+        <div id=teller>
+            <h2>Je hebt nog</h2>
+                <span id="aantalpogingen">...</span>
+            <h2>pogingen over om je aardappel in elkaar te zetten</h2>
+        </div>
+        <!-- einde teller voor aantal pogingen over -->
+
+    <script src="js/script.js"></script>
+</body>
+</html>
